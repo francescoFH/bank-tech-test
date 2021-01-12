@@ -3,7 +3,7 @@ require_relative 'bank'
 class Statement
   def show(transactions = false)
     if transactions
-      statement(transactions)
+      puts statement(transactions)
     else header
     end
   end

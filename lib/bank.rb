@@ -8,6 +8,7 @@ class Bank
     @balance = balance
     @register = Register.new
     @transactions = register.transactions
+    @activity_report = Statement.new
   end
 
   def deposit(amount, date = Time.new.strftime('%d/%m/%Y'))
@@ -20,5 +21,9 @@ class Bank
 
     @balance -= amount
     register.debit(date, amount, balance)
+  end
+
+  def statement
+    @activity_report.show(transactions)
   end
 end
