@@ -27,9 +27,8 @@ I have created three different classes to keep my app simple and readable:
   * Bank class to be able to create accounts, make deposits and withdraws and to see statements;
   * Register class to be able to store the transactions;
   * Statement class to be able to print the statement correctly.
-  
-I have used SimpleCov and achieved a total coverage of 98.77%.
-I have used rubocop to write my code with the right syntax.
+
+I have used SimpleCov and achieved a total coverage of 98.77% and rubocop to write my code with the right syntax.
 
 ### User Stories
 ```
