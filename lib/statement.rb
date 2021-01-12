@@ -15,8 +15,8 @@ class Statement
   end
 
   def statement(values)
-    values.map! { |entry| entry.join(' || ') }
-    reversed_entries = values.reverse.join("\n ")
-    "#{header}\n #{reversed_entries}"
+    transactions = values.map { |entry| entry.join(' || ') }
+    reversed_transactions = transactions.reverse.join("\n ")
+    "#{header}\n #{reversed_transactions}"
   end
 end
