@@ -2,10 +2,7 @@ require_relative 'bank'
 
 class Statement
   def show(transactions = false)
-    if transactions
-      puts statement(transactions)
-    else header
-    end
+    puts transactions ? statement(transactions) : header
   end
 
   private
