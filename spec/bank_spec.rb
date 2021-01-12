@@ -27,7 +27,7 @@ describe Bank do
     it 'stores money movements' do
       account.deposit(100)
       account.withdraw(30)
-      expect(account.activity_report).to eq([[date, 100, nil, 100], [date, nil, 30, 70]])
+      expect(account.transactions).to eq([[date, 100, nil, 100], [date, nil, 30, 70]])
     end
   end
 end

@@ -1,20 +1,24 @@
+require_relative 'register'
+require_relative 'statement'
+
 class Bank
-  attr_reader :balance, :activity_report
+  attr_reader :balance, :transactions, :register
 
   def initialize(balance = 0)
     @balance = balance
-    @activity_report = []
+    @register = Register.new
+    @transactions = register.transactions
   end
 
   def deposit(amount, date = Time.new.strftime('%d/%m/%Y'))
     @balance += amount
-    @activity_report << [date, amount, nil, balance]
+    register.credit(date, amount, balance)
   end
 
   def withdraw(amount, date = Time.new.strftime('%d/%m/%Y'))
     raise 'Unable to withdraw: insufficient funds.' if (balance - amount).negative?
 
     @balance -= amount
-    @activity_report << [date, nil, amount, balance]
+    register.debit(date, amount, balance)
   end
 end

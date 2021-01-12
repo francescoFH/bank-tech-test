@@ -1,9 +1,9 @@
 require_relative 'bank'
 
 class Statement
-  def show(values = false)
-    if values
-      statement(values)
+  def show(transactions = false)
+    if transactions
+      statement(transactions)
     else header
     end
   end
