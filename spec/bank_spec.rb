@@ -16,5 +16,9 @@ describe Bank do
       account.withdraw(30)
       expect(account.balance).to eq 70
     end
+
+    it 'raise error if overdrawn' do
+      expect { account.withdraw(10) }.to raise_error 'Unable to withdraw: insufficient funds.'
+    end
   end
 end
