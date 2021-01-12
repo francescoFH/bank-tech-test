@@ -1,5 +1,4 @@
 class Bank
-
   attr_reader :balance, :activity_report
 
   def initialize(balance = 0)
@@ -13,13 +12,9 @@ class Bank
   end
 
   def withdraw(amount, date = Time.new.strftime('%d/%m/%Y'))
-    fail 'Unable to withdraw: insufficient funds.' if (@balance - amount).negative?
+    raise 'Unable to withdraw: insufficient funds.' if (balance - amount).negative?
+
     @balance -= amount
     @activity_report << [date, nil, amount, balance]
-  end
-
-  private
-  def negative?(amount)
-    amount.negative?
   end
 end

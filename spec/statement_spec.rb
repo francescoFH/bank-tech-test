@@ -6,7 +6,7 @@ describe Statement do
   let(:date) { Time.new.strftime('%d/%m/%Y') }
 
   it 'displays an empty statement' do
-    expect(statement.show()).to eq 'date || credit || debit || balance'
+    expect(statement.show).to eq 'date || credit || debit || balance'
   end
 
   it 'displays activity_report' do
