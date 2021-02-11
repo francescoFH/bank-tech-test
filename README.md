@@ -1,6 +1,6 @@
 # Bank Tech Test
 
-### To Run the App
+### How to Run the App
 ```
 $ git clone https://github.com/francescoFH/bank-tech-test
 $ bundle install
