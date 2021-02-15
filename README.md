@@ -53,7 +53,6 @@ I want to print a bank statement
 ```
 
 ### Acceptance criteria
-
 **Given** a client makes a deposit of 1000 on 10-01-2021  
 **And** a deposit of 2000 on 11-01-2021
 **And** a withdrawal of 500 on 12-01-2021  
