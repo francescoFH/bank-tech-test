@@ -1,5 +1,11 @@
 # Bank Tech Test
 
+Example of tech test to practice code quality and process.
+
+It allows you to create an account, deposit funds into it, withdraw funds from it, and print statements.
+
+You can find a reimplementation of this tech test in JavaScript [here](https://github.com/francescoFH/bankTechTest-JS).
+
 ### How to Run the App
 ```
 $ git clone https://github.com/francescoFH/bank-tech-test
